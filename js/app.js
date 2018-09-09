@@ -39,7 +39,9 @@
                         }
                     break;
                     case 'up':
+                        if(this.y > 0){
                         this.y -= this.straightStep;
+                        }
                     break;
                     case 'right':
                         this.x += this.sideStep;
