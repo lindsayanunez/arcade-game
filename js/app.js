@@ -3,13 +3,17 @@
     //Constructor
         constructor(){
         //properties
-            //x cordinates
-                this.x = 0;
-            //y cordinates
-                this.y = 0;
             //size of steps the player taks
                 this.sideStep = 101;
                 this.straightStep = 83;
+            //starting position for the player
+                this.beginX = this.sideStep * 2;
+                this.beginY = this.straightStep * 5;
+            //x cordinates
+                this.x = this.beginX;
+            //y cordinates
+                this.y = this.beginY;
+
             //player image
                 this.sprite = 'images/char-boy.png';
             }
