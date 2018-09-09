@@ -34,7 +34,9 @@
                 //update the player in accordance with x & y
                 switch(input){
                     case 'left':
+                        if(this.x > 0){ //parameter to stay on board
                         this.x -= this.sideStep;
+                        }
                     break;
                     case 'up':
                         this.y -= this.straightStep;
