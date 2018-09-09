@@ -1,3 +1,29 @@
+//player class
+    //Constructor
+
+    //properties
+        //x cordinates
+
+        //y cordinates
+
+        //player image
+
+    //methods
+        //update position
+            //check for collision
+                //does player x&y === enemy x&y
+            //check for win
+                //does player enter top of grid
+        //Render the Player
+            //renders player image on the coordinate
+        //Handle Keyboard input
+            //update the player in accordance with x & y
+        //Reset the Player
+            //Return player to starting block
+
+
+
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
