@@ -44,10 +44,14 @@
                         }
                     break;
                     case 'right':
+                        if(this.x < this.beginX * 2){
                         this.x += this.sideStep;
+                        }
                     break;
                     case 'down':
+                        if(this.y < this.beginy * 5){
                         this.y += this.straightStep;;
+                        }
                     break;
                 }
             //Reset the Player
