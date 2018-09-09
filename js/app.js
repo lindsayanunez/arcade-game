@@ -7,6 +7,9 @@
                 this.x = 0;
             //y cordinates
                 this.y = 0;
+            //size of steps the player taks
+                this.sideStep = 101;
+                this.straightStep = 83;
             //player image
                 this.sprite = 'images/char-boy.png';
             }
@@ -27,16 +30,16 @@
                 //update the player in accordance with x & y
                 switch(input){
                     case 'left':
-                        this.x -= 40;
+                        this.x -= this.sideStep;
                     break;
                     case 'up':
-                        this.y -= 40;
+                        this.y -= this.straightStep;
                     break;
                     case 'right':
-                        this.x += 40;
+                        this.x += this.sideStep;
                     break;
                     case 'down':
-                        this.y += 40;
+                        this.y += this.straightStep;;
                     break;
                 }
             //Reset the Player
