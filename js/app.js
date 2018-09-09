@@ -1,5 +1,5 @@
 //player class
-    class Player {
+    class Hero {
     //Constructor
         constructor(){
         //properties
@@ -8,24 +8,30 @@
             //y cordinates
                 this.y = 0;
             //player image
-                this.sprite ='mages/char-pink-girl.png';
+                this.sprite = 'images/char-boy.png';
             }
         //methods
-
+            //Render the Player
+            render(){
+                //renders player image on the coordinate
+                ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+            }
             //update position
                 //check for collision
                     //does player x&y === enemy x&y
                 //check for win
                     //does player enter top of grid
-            //Render the Player
-
-
+             @param {string} input //- Player's travel directions
             //Handle Keyboard input
+            handleInput(input){
                 //update the player in accordance with x & y
             //Reset the Player
                 //Return player to starting block
-
+            }
     }
+
+const player = new Hero();
+
 
 
 // Enemies our player must avoid
