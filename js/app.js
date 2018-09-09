@@ -21,14 +21,28 @@
                     //does player x&y === enemy x&y
                 //check for win
                     //does player enter top of grid
-             @param {string} input //- Player's travel directions
             //Handle Keyboard input
+           // * @param {string} input //- Player's travel directions
             handleInput(input){
                 //update the player in accordance with x & y
+                switch(input){
+                    case 'left':
+                        this.x -= 40;
+                    break;
+                    case 'up':
+                        this.y -= 40;
+                    break;
+                    case 'right':
+                        this.x += 40;
+                    break;
+                    case 'down':
+                        this.y += 40;
+                    break;
+                }
             //Reset the Player
                 //Return player to starting block
             }
-    }
+        }
 
 const player = new Hero();
 
