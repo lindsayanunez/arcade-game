@@ -49,7 +49,7 @@
                         }
                     break;
                     case 'down':
-                        if(this.y < this.beginy * 5){
+                        if(this.y < this.beginY){
                         this.y += this.straightStep;;
                         }
                     break;
