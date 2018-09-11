@@ -115,7 +115,7 @@ const bug3 = new Enemy();
 const bug4 = new Enemy();
 const bug5 = new Enemy();
 const allEnemies = [];
-allEnemies.push(bug1);
+allEnemies.push(bug1, bug2, bug3, bug4, bug5);
 
 // Now write your own player class
 // This class requires an update(), render() and
