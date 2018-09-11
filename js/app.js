@@ -87,10 +87,10 @@ Enemy.prototype.update = function(dt) {
     // all computers.
 
     //if enemy has NOT reached end of board
-    if(this.x < this.sideStep*4){
+    if(this.x < this.sideStep*5){
         // move forward
         //increment x by speed * dt
-        this.x +=40 * dt;
+        this.x +=200 * dt;
     }
 
     //else (enemy reaches end of board)
