@@ -23,18 +23,20 @@
                 //renders player image on the coordinate
                 ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
             }
+            //player starts from begining once hit
             //update position
             update(){
+                //check for collision
+                    //does player x&y === enemy x&y
                 for(let enemy of allEnemies){
                   //check for collision
                     //does player x&y === enemy x&y
-                    if(this.y === enemy.y){
-                        console.log('Crash!')
+                    if(this.y === enemy.y && (enemy.x + enemy.sideStep/2 > this.x  && enemy.x < this.x + this.sideStep/2)){
+                        this.startOver();
                     }
                 }
 
-                //check for collision
-                    //does player x&y === enemy x&y
+
                 //check for win
                     //does player enter top of grid
                  }
