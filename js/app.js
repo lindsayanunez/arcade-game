@@ -16,6 +16,8 @@
 
             //player image
                 this.sprite = 'images/char-boy.png';
+            //winning condition
+                this.winning = false;
             }
         //methods
             //Render the Player
@@ -44,7 +46,11 @@
 
 
                 //check for win
+                if(this.y === 55){
                     //does player enter top of grid
+                    this.winning =true;
+                }
+
                  }
             //Handle Keyboard input
            // * @param {string} input //- Player's travel directions
