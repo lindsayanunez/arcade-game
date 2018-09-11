@@ -49,11 +49,12 @@
                         console.log('win');
                     }
                     if(player.winning ===true){
-                    console.log('game over');
-                    win.requestAnimationFrame(main);
+                        win.requestAnimationFrame(id);
+                        modal.classList.toggle('show');
                     }
                 }
-            }
+               }
+
             //Handle Keyboard input
            // * @param {string} input //- Player's travel directions
             handleInput(input){
@@ -167,4 +168,11 @@ document.addEventListener('keyup', function(e) {
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
+});
+
+playAgain.addEventListener('click', function(){
+    modal.classList.toggle('show');
+    player.reset();
+    player.winning =false;
+    win.requestAnimationFrame(main);
 });
