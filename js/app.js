@@ -64,7 +64,7 @@ const player = new Hero();
 
 
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy = function(x, y, pace) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
