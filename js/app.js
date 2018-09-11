@@ -93,6 +93,9 @@ Enemy.prototype.update = function(dt) {
         //increment x by speed * dt
         this.x +=200 * dt;
     }
+    else{
+        this.x =0;
+    }
 
     //else (enemy reaches end of board)
         //Reset pos to start
