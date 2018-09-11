@@ -24,6 +24,12 @@
                 ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
             }
             //player starts from begining once hit
+            startOver(){
+                 //x cordinates
+                this.x = this.beginX;
+            //y cordinates
+                this.y = this.beginY;
+            }
             //update position
             update(){
                 //check for collision
