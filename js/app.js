@@ -8,7 +8,7 @@
                 this.straightStep = 83;
             //starting position for the player
                 this.beginX = this.sideStep * 2;
-                this.beginY = (this.straightStep * 5) +55;
+                this.beginY = (this.straightStep * 4) +55;
             //x cordinates
                 this.x = this.beginX;
             //y cordinates
