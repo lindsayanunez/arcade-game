@@ -42,16 +42,18 @@
                     if(this.y === enemy.y && (enemy.x + enemy.sideStep/2 > this.x  && enemy.x < this.x + this.sideStep/2)){
                         this.startOver();
                     }
+                    //check for win
+                    if(this.y < 0){
+                        //does player enter top of grid
+                        this.winning =true;
+                        console.log('win');
+                    }
+                    if(player.winning ===true){
+                    console.log('game over');
+                    win.requestAnimationFrame(main);
+                    }
                 }
-
-
-                //check for win
-                if(this.y === 55){
-                    //does player enter top of grid
-                    this.winning =true;
-                }
-
-                 }
+            }
             //Handle Keyboard input
            // * @param {string} input //- Player's travel directions
             handleInput(input){
