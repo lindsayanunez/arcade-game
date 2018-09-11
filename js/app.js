@@ -8,7 +8,7 @@
                 this.straightStep = 83;
             //starting position for the player
                 this.beginX = this.sideStep * 2;
-                this.beginY = this.straightStep * 5;
+                this.beginY = (this.straightStep * 5) +55;
             //x cordinates
                 this.x = this.beginX;
             //y cordinates
@@ -24,10 +24,20 @@
                 ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
             }
             //update position
+            update(){
+                for(let enemy of allEnemies){
+                  //check for collision
+                    //does player x&y === enemy x&y
+                    if(this.y === enemy.y){
+                        console.log('Crash!')
+                    }
+                }
+
                 //check for collision
                     //does player x&y === enemy x&y
                 //check for win
                     //does player enter top of grid
+                 }
             //Handle Keyboard input
            // * @param {string} input //- Player's travel directions
             handleInput(input){
