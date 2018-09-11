@@ -69,8 +69,10 @@ var Enemy = function() {
     // we've provided one for you to get started
 
     // x cordinate
-    // y cordiante
+    this.x = 0;
 
+    // y cordiante
+    this.y = 0;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -96,6 +98,10 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
+const bug1 = new Enemy();
+const allEnemies = [];
+allEnemies.push(bug1);
 
 // Now write your own player class
 // This class requires an update(), render() and
