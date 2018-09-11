@@ -72,12 +72,13 @@ var Enemy = function() {
     this.x = 0;
 
     // y cordiante
-    this.y = 0;
+    this.y = 55;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
     this.sideStep = 101;
     this.bugStop = this.sideStep * 5;
+    this.bugStart = this.sideStep * -1;
 };
 
 // Update the enemy's position, required method for game
@@ -91,10 +92,10 @@ Enemy.prototype.update = function(dt) {
     if(this.x < this.bugStop){
         // move forward
         //increment x by speed * dt
-        this.x +=200 * dt;
+        this.x +=50 * dt;
     }
     else{
-        this.x =0;
+        this.x = this.bugStart;
     }
 
     //else (enemy reaches end of board)
