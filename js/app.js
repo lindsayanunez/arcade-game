@@ -72,13 +72,15 @@ var Enemy = function(x, y, pace) {
     this.x = 0;
 
     // y cordiante
-    this.y = 55;
+    this.y = y+55;
+    this.pace = pace;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
     this.sideStep = 101;
     this.bugStop = this.sideStep * 5;
     this.bugStart = this.sideStep * -1;
+    this.pace = pace;
 };
 
 // Update the enemy's position, required method for game
@@ -92,7 +94,7 @@ Enemy.prototype.update = function(dt) {
     if(this.x < this.bugStop){
         // move forward
         //increment x by speed * dt
-        this.x +=50 * dt;
+        this.x +=this.pace * dt;
     }
     else{
         this.x = this.bugStart;
@@ -109,13 +111,13 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-const bug1 = new Enemy();
-const bug2 = new Enemy();
-const bug3 = new Enemy();
-const bug4 = new Enemy();
-const bug5 = new Enemy();
+const bug1 = new Enemy(-101, 0, 100);
+const bug2 = new Enemy(-101, 249, 50);
+const bug3 = new Enemy(-101, 166, 150);
+const bug4 = new Enemy(-101, 166, 300);
+const bug5 = new Enemy((-101 * 3), 83);
 const allEnemies = [];
-allEnemies.push(bug1, bug2, bug3, bug4, bug5);
+allEnemies.push(bug1,bug2,bug3,bug4,bug5);
 
 // Now write your own player class
 // This class requires an update(), render() and
