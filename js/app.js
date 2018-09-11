@@ -76,6 +76,7 @@ var Enemy = function() {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
+    this.sideStep = 101;
 };
 
 // Update the enemy's position, required method for game
@@ -86,8 +87,12 @@ Enemy.prototype.update = function(dt) {
     // all computers.
 
     //if enemy has NOT reached end of board
+    if(this.x < this.sideStep*4){
         // move forward
         //increment x by speed * dt
+        this.x +=40 * dt;
+    }
+
     //else (enemy reaches end of board)
         //Reset pos to start
 
