@@ -110,6 +110,10 @@ Enemy.prototype.render = function() {
 };
 
 const bug1 = new Enemy();
+const bug2 = new Enemy();
+const bug3 = new Enemy();
+const bug4 = new Enemy();
+const bug5 = new Enemy();
 const allEnemies = [];
 allEnemies.push(bug1);
 
