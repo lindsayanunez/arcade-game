@@ -25,8 +25,6 @@ var Engine = (function(global) {
         lastTime,
         id;
 
-    const modal = document.querySelector('.modal-bg');
-    const playAgain = document.querySelector('.modal-button');
 
     canvas.width = 505;
     canvas.height = 606;
@@ -83,7 +81,7 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        // update();
     }
 
     /* This is called by the update function and loops through all of the

@@ -1,3 +1,5 @@
+    const modal = document.querySelector('.modal-bg');
+
 //player class
     class Hero {
     //Constructor
@@ -49,8 +51,8 @@
                         console.log('win');
                     }
                     if(player.winning ===true){
-                        win.requestAnimationFrame(id);
                         modal.classList.toggle('show');
+                        win.requestAnimationFrame(id);
                     }
                 }
                }
@@ -170,9 +172,11 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
+const playAgain = document.querySelector('.modal-button');
+
 playAgain.addEventListener('click', function(){
     modal.classList.toggle('show');
-    player.reset();
+    player.startOver();
     player.winning =false;
-    win.requestAnimationFrame(main);
+    // win.requestAnimationFrame(main);
 });
