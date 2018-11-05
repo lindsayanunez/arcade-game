@@ -33,6 +33,13 @@ const playAgain = document.querySelector('.modal-button');
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
+    playAgain.addEventListener('click', function(){
+        modal.classList.toggle('show');
+        player.startOver();
+        player.winning =false;
+        win.requestAnimationFrame(main);
+    });
+
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
      */
@@ -71,12 +78,7 @@ const playAgain = document.querySelector('.modal-button');
         //      });
 
 
-    playAgain.addEventListener('click', function(){
-        modal.classList.toggle('show');
-        player.startOver();
-        player.winning =false;
-        win.requestAnimationFrame(main);
-    });
+
 
 
         if(player.winning === true){
