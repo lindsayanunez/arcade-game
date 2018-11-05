@@ -6,7 +6,7 @@ body {
   display:none;
 }
  .modal-bg{
-    height: 100%;
+    height: 150%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.25);
     position: absolute;
@@ -15,8 +15,8 @@ body {
  }
 
  .modal-text{
-  width: 50%;
-  height:35%;
+  width: 400px;
+  height:200px;
   margin:auto;
   background-color: white;
   position: relative;
