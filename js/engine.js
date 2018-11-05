@@ -25,6 +25,9 @@ var Engine = (function(global) {
         lastTime,
         id;
 
+const modal = document.querySelector('.show');
+const playAgain = document.querySelector('.modal-button');
+
 
     canvas.width = 505;
     canvas.height = 606;
@@ -57,7 +60,33 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
+
+        // replay.addEventListener('click', event =>{
+
+        //         modal.classList.toggle('show');
+        //         player.startOver();
+        //         player.winning =false;
+        //         win.requestAnimationFrame(main);
+
+        //      });
+
+
+    playAgain.addEventListener('click', function(){
+        modal.classList.toggle('show');
+        player.startOver();
+        player.winning =false;
         win.requestAnimationFrame(main);
+    });
+
+
+        if(player.winning === true){
+            win.cancelAnimationFrame(id);
+            modal.classList.toggle('hide');
+        }else{
+            id = win.requestAnimationFrame(main);
+        }
+
+
     }
 
     /* This function does some initial setup that should only occur once,
@@ -81,8 +110,9 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // update();
     }
+            // update();
+
 
     /* This is called by the update function and loops through all of the
      * objects within your allEnemies array as defined in app.js and calls

@@ -1,4 +1,4 @@
-    const modal = document.querySelector('.modal-bg');
+const modal = document.querySelector('.show');
 
 //player class
     class Hero {
@@ -52,8 +52,12 @@
                     }
                     if(player.winning ===true){
                         modal.classList.toggle('show');
-                        win.requestAnimationFrame(id);
+                        // win.cancelAnimationFrame(id);
                     }
+                    // else{
+                    //     win.requestAnimationFrame(main);
+
+                    // }
                 }
                }
 
@@ -172,11 +176,10 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-const playAgain = document.querySelector('.modal-button');
-
-playAgain.addEventListener('click', function(){
-    modal.classList.toggle('show');
-    player.startOver();
-    player.winning =false;
-    // win.requestAnimationFrame(main);
-});
+// const playAgain = document.querySelector('.modal-button');
+// playAgain.addEventListener('click', function(){
+//     modal.classList.toggle('show');
+//     player.startOver();
+//     player.winning =false;
+//     // win.requestAnimationFrame(main);
+// });
