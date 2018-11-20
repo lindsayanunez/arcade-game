@@ -13,7 +13,7 @@
  * writing app.js a little simpler to work with.
  */
 
-var Engine = (function(global) {
+var Engine = (function (global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
      * set the canvas elements height/width and add it to the DOM.
@@ -25,18 +25,18 @@ var Engine = (function(global) {
         lastTime,
         id;
 
-const modal = document.querySelector('.show');
-const playAgain = document.querySelector('.modal-button');
+    const modal = document.querySelector('.show');
+    const playAgain = document.querySelector('.modal-button');
 
 
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
-    playAgain.addEventListener('click', function(){
+    playAgain.addEventListener('click', function () {
         modal.classList.toggle('show');
         player.startOver();
-        player.winning =false;
+        player.winning = false;
         win.requestAnimationFrame(main);
     });
 
@@ -78,13 +78,10 @@ const playAgain = document.querySelector('.modal-button');
         //      });
 
 
-
-
-
-        if(player.winning === true){
+        if (player.winning === true) {
             win.cancelAnimationFrame(id);
             modal.classList.toggle('hide');
-        }else{
+        } else {
             id = win.requestAnimationFrame(main);
         }
 
@@ -113,7 +110,7 @@ const playAgain = document.querySelector('.modal-button');
     function update(dt) {
         updateEntities(dt);
     }
-            // update();
+    // update();
 
 
     /* This is called by the update function and loops through all of the
@@ -124,7 +121,7 @@ const playAgain = document.querySelector('.modal-button');
      * render methods.
      */
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {
+        allEnemies.forEach(function (enemy) {
             enemy.update(dt);
         });
         player.update();
@@ -141,19 +138,19 @@ const playAgain = document.querySelector('.modal-button');
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/water-block.png', // Top row is water
+                'images/stone-block.png', // Row 1 of 3 of stone
+                'images/stone-block.png', // Row 2 of 3 of stone
+                'images/stone-block.png', // Row 3 of 3 of stone
+                'images/grass-block.png', // Row 1 of 2 of grass
+                'images/grass-block.png' // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
             row, col;
 
         // Before drawing, clear existing canvas
-        ctx.clearRect(0,0,canvas.width,canvas.height)
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
 
         /* Loop through the number of rows and columns we've defined above
          * and, using the rowImages array, draw the correct image for that
@@ -183,7 +180,7 @@ const playAgain = document.querySelector('.modal-button');
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
-        allEnemies.forEach(function(enemy) {
+        allEnemies.forEach(function (enemy) {
             enemy.render();
         });
 
