@@ -109,3 +109,12 @@
         isReady: isReady
     };
 })();
+
+// RESOURCES
+// Starter Code from Udacity Front-End Nanodegree](https://github.com/udacity/frontend-nanodegree-arcade-game
+// Matthew Cranford's Tutorial Part 1-https://matthewcranford.com/arcade-game-walkthrough-part-1-starter-code-breakdown/
+// Matthew Cranford's Tutorial Part 2-https://matthewcranford.com/arcade-game-walkthrough-part-2-pseudo-code/
+// Matthew Cranford's Tutorial Part 3-https://matthewcranford.com/arcade-game-walkthrough-part-3-creating-a-hero/)
+// Matthew Cranford's Tutorial Part 4-https://matthewcranford.com/arcade-game-walkthrough-part-4-heros-first-steps/
+// Matthew Cranford's Tutorial Part 5-https://matthewcranford.com/arcade-game-walkthrough-part-5-adding-enemies/
+// Matthew Cranford's Tutorial Part 6-https://matthewcranford.com/arcade-game-walkthrough-part-6-collisions-win-conditions-and-game-resets/
