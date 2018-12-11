@@ -1,8 +1,12 @@
-# Bugger Arcade Game
+# Front-end Web Developer Nanodegree Project #3
 
-## Summary
+### Bugger Arcade Game
+
+## Description
 
 Bugger Arcade Game is a variation of the classic Frogger arcade game. This project was completed as part of the Grow with Google Scholarship for the Udacity Front-End Nanodegree.
+
+#### Note: starter code was provided. See commits for my work.
 
 ### Goals
 
@@ -22,32 +26,11 @@ To play this game and run the application:
 3. Play Bugger!
 
 ## Tools & Process
--Object Oriented Javascript
--Prototypal Inheritance
--Constructor Function
--HTML5 Canvas API
--Immediately-Invoked Function Expressions (IIFE)
-
-# Project Requirements
-[https://review.udacity.com/#!/rubrics/15/view](https://review.udacity.com/#!/rubrics/15/view) "Udacity Front End Nanodegree Arcade Game Requirements"
-
-# Matching Game Project
-
-Classic Matching Game
-
-### How to play
-
-*The deck has 16 cards with 8 pairs. The goal of the game is test your memory to find all the pairs.
-*Click on the each card to turn over the card.
-
-
+ - Object Oriented Javascript
+ - Prototypal Inheritance
+ - Constructor Function
+ - HTML5 Canvas API
+ - Immediately-Invoked Function Expressions (IIFE)
 
 ### Resources Used
-
 * [Starter Code from Udacity Front-End Nanodegree](https://github.com/udacity/frontend-nanodegree-arcade-game)
-* [Matthew Cranford's Tutorial Part 1](https://matthewcranford.com/arcade-game-walkthrough-part-1-starter-code-breakdown/)
-* [Matthew Cranford's Tutorial Part 2](https://matthewcranford.com/arcade-game-walkthrough-part-2-pseudo-code/)
-* [Matthew Cranford's Tutorial Part 3](https://matthewcranford.com/arcade-game-walkthrough-part-3-creating-a-hero/)
-* [Matthew Cranford's Tutorial Part 4](https://matthewcranford.com/arcade-game-walkthrough-part-4-heros-first-steps/)
-* [Matthew Cranford's Tutorial Part 5](https://matthewcranford.com/arcade-game-walkthrough-part-5-adding-enemies/)
-* [Matthew Cranford's Tutorial Part 6](https://matthewcranford.com/arcade-game-walkthrough-part-6-collisions-win-conditions-and-game-resets/)
